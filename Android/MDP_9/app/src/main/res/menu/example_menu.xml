@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bluetoothMenuItem"
+        android:icon="@drawable/ic_bluetooth"
+        android:title="Bluetooth"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/messageMenuItem"
+        android:icon="@drawable/ic_message"
+        android:title="Message Box"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/getMapMenuItem"
+        android:icon="@drawable/ic_map_info"
+        android:title="Map Information"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuMenuItem"
+        android:title="Map"
+        app:showAsAction="never" >
+
+        <menu
+            android:id="@+id/mapMenuItem"
+            android:title="Map Menu"
+            app:showAsAction="never" >
+
+            <item
+                android:id="@+id/saveMapMenuItem"
+                android:icon="@drawable/ic_message"
+                android:title="Save Map"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/loadMapMenuItem"
+                android:title="Load Map"
+                app:showAsAction="never" />
+
+        </menu>
+    </item>
+
+</menu>

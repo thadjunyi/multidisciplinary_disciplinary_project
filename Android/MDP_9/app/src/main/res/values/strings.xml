@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MDP_9</string>
+    <string name="explore_time">Explore Time:</string>
+    <string name="default_time">00:00</string>
+    <string name="explore_button">EXPLORE</string>
+    <string name="fastest_time">Fastest Time:</string>
+    <string name="fastest_button">FASTEST</string>
+    <string name="robot_status_title">ROBOT STATUS</string>
+    <string name="reset_map_button">RESET MAP</string>
+    <string name="set_waypoint_button">WAYPOINT</string>
+    <string name="set_start_point_button">STARTING POINT</string>
+    <string name="message_sent">Message Sent</string>
+    <string name="message_received">Message Received</string>
+</resources>

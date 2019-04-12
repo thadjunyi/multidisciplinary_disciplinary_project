@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thad.mdp_9.ReconfigureFragment">
+
+    <TextView
+        android:id="@+id/reconfigureTitleTextView"
+        android:layout_width="500dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Reconfiguration"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/f1TitleTextView"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="F1: "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reconfigureTitleTextView" />
+
+    <EditText
+        android:id="@+id/f1ValueEditText"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="Enter F1 value"
+        android:inputType="textShortMessage|textPersonName"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reconfigureTitleTextView" />
+
+    <TextView
+        android:id="@+id/f2TitleTextView"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="F2: "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f1TitleTextView" />
+
+    <EditText
+        android:id="@+id/f2ValueEditText"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="Enter F2 value"
+        android:inputType="textShortMessage|textPersonName"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f1ValueEditText" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="25dp"
+        android:onClick="Save"
+        android:text="SAVE"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f2ValueEditText" />
+
+    <Button
+        android:id="@+id/cancelReconfigureBtn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginTop="25dp"
+        android:onClick="Cancel"
+        android:text="CANCEL"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f2ValueEditText" />
+
+</android.support.constraint.ConstraintLayout>

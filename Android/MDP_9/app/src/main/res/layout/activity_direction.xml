@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/directionFragmentTitleTextView"
+        android:layout_width="500dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Change Direction"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/directionTitleTextView"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Direction: "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/directionFragmentTitleTextView" />
+
+    <EditText
+        android:id="@+id/directionValueEditText"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="Enter direction"
+        android:inputType="textShortMessage|textPersonName"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/directionFragmentTitleTextView" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="25dp"
+        android:onClick="Save"
+        android:text="SAVE"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/directionTitleTextView" />
+
+    <Button
+        android:id="@+id/cancelDirectionBtn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginTop="25dp"
+        android:onClick="Cancel"
+        android:text="CANCEL"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/directionTitleTextView" />
+
+</android.support.constraint.ConstraintLayout>

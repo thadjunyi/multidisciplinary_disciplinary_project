@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="com.thad.mdp_9.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <view
+        android:id="@+id/mapView"
+        class="com.thad.mdp_9.GridMap"
+        android:layout_width="390dp"
+        android:layout_height="520dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/exploreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/explore_time"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toEndOf="@+id/mapView"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/exploreTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/default_time"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mapView"
+        app:layout_constraintTop_toBottomOf="@+id/exploreTextView" />
+
+    <ToggleButton
+        android:id="@+id/exploreToggleBtn"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:textAlignment="center"
+        android:textOn="STOP"
+        android:textOff="@string/explore_button"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@+id/mapView"
+        app:layout_constraintTop_toBottomOf="@+id/exploreTimeTextView" />
+
+    <ImageButton
+        android:id="@+id/exploreResetImageBtn"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/exploreToggleBtn"
+        app:layout_constraintTop_toBottomOf="@+id/exploreTimeTextView"
+        app:srcCompat="@drawable/ic_refresh" />
+
+    <TextView
+        android:id="@+id/fastestTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/fastest_time"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mapView"
+        app:layout_constraintTop_toBottomOf="@+id/exploreToggleBtn" />
+
+    <TextView
+        android:id="@+id/fastestTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/default_time"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mapView"
+        app:layout_constraintTop_toBottomOf="@+id/fastestTextView" />
+
+    <ToggleButton
+        android:id="@+id/fastestToggleBtn"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:textAlignment="center"
+        android:textOn="STOP"
+        android:textOff="@string/fastest_button"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@+id/mapView"
+        app:layout_constraintTop_toBottomOf="@+id/fastestTimeTextView" />
+
+    <ImageButton
+        android:id="@+id/fastestResetImageBtn"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fastestToggleBtn"
+        app:layout_constraintTop_toBottomOf="@+id/fastestTimeTextView"
+        app:srcCompat="@drawable/ic_refresh" />
+
+    <TextView
+        android:id="@+id/robotStatusTitleTextView"
+        android:layout_width="140dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border"
+        android:text="@string/robot_status_title"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mapView"
+        app:layout_constraintTop_toBottomOf="@+id/fastestToggleBtn" />
+
+    <TextView
+        android:id="@+id/robotStatusTextView"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/border"
+        android:scrollbars="vertical"
+        android:text="no status yet"
+        android:textAlignment="center"
+        android:textColor="@color/colorRed"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mapView"
+        app:layout_constraintTop_toBottomOf="@+id/robotStatusTitleTextView" />
+
+    <ImageButton
+        android:id="@+id/moveForwardImageBtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mapView"
+        app:layout_constraintTop_toBottomOf="@+id/robotStatusTextView"
+        app:srcCompat="@drawable/ic_arrow_move_forward" />
+
+    <ImageButton
+        android:id="@+id/moveBackwardImageBtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mapView"
+        app:layout_constraintTop_toBottomOf="@+id/turnLeftImageBtn"
+        app:srcCompat="@drawable/ic_arrow_move_backward" />
+
+    <ImageButton
+        android:id="@+id/turnLeftImageBtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toEndOf="@+id/mapView"
+        app:layout_constraintTop_toBottomOf="@+id/moveForwardImageBtn"
+        app:srcCompat="@drawable/ic_arrow_move_left" />
+
+    <ImageButton
+        android:id="@+id/turnRightImageBtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moveForwardImageBtn"
+        app:srcCompat="@drawable/ic_arrow_move_right" />
+
+    <Switch
+        android:id="@+id/phoneTiltSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:splitTrack="false"
+        android:text="TILT OFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintStart_toEndOf="@+id/mapView"
+        app:layout_constraintTop_toTopOf="@+id/turnRightImageBtn" />
+
+    <Button
+        android:id="@+id/resetMapBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/reset_map_button"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/setStartPointToggleBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+    <ToggleButton
+        android:id="@+id/setStartPointToggleBtn"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textAlignment="center"
+        android:textOn="CANCEL"
+        android:textOff="@string/set_start_point_button"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+    <ToggleButton
+        android:id="@+id/setWaypointToggleBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="20dp"
+        android:textAlignment="center"
+        android:textOn="CANCEL"
+        android:textOff="@string/set_waypoint_button"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/setStartPointToggleBtn"
+        app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+    <TextView
+        android:id="@+id/xLabelTextView"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:text="X:"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setStartPointToggleBtn" />
+
+    <TextView
+        android:id="@+id/xAxisTextView"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="@color/colorRed"
+        app:layout_constraintStart_toEndOf="@+id/xLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/setStartPointToggleBtn" />
+
+    <TextView
+        android:id="@+id/yLabelTextView"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="55dp"
+        android:gravity="center_horizontal"
+        android:text="Y:"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/xLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/setStartPointToggleBtn" />
+
+    <TextView
+        android:id="@+id/yAxisTextView"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="@color/colorRed"
+        app:layout_constraintStart_toEndOf="@+id/yLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/setStartPointToggleBtn" />
+
+    <TextView
+        android:id="@+id/directionLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="55dp"
+        android:gravity="center_horizontal"
+        android:text="Direction:"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/yLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/setStartPointToggleBtn" />
+
+    <TextView
+        android:id="@+id/directionAxisTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:text="None"
+        android:textAlignment="center"
+        android:textColor="@color/colorRed"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/directionLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/setStartPointToggleBtn" />
+
+    <ImageButton
+        android:id="@+id/directionChangeImageBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/obstacleImageBtn"
+        app:layout_constraintHorizontal_bias="0.60"
+        app:layout_constraintStart_toEndOf="@+id/directionLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/setStartPointToggleBtn"
+        app:srcCompat="@drawable/ic_change" />
+
+    <ImageButton
+        android:id="@+id/exploredImageBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/obstacleImageBtn"
+        app:layout_constraintTop_toTopOf="@+id/directionLabelTextView"
+        app:srcCompat="@drawable/ic_check" />
+
+    <ImageButton
+        android:id="@+id/obstacleImageBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/clearImageBtn"
+        app:layout_constraintTop_toTopOf="@+id/directionLabelTextView"
+        app:srcCompat="@drawable/ic_arrow_error" />
+
+    <ImageButton
+        android:id="@+id/clearImageBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setStartPointToggleBtn"
+        app:srcCompat="@drawable/ic_clear" />
+
+    <TextView
+        android:id="@+id/messageSentTitleTextView"
+        android:layout_width="292dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/border_black_background"
+        android:text="Arrow Coordinates"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setStartPointToggleBtn" />
+
+    <TextView
+        android:id="@+id/messageReceivedTitleTextView"
+        android:layout_width="292dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/border_black_background"
+        android:text="@string/message_received"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setStartPointToggleBtn" />
+
+    <TextView
+        android:id="@+id/messageSentTextView"
+        android:layout_width="292dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/border_white_background"
+        android:textSize="11sp"
+        android:scrollbars = "vertical"
+        android:gravity="bottom"
+        app:layout_constraintEnd_toEndOf="@+id/messageSentTitleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageSentTitleTextView" />
+
+    <TextView
+        android:id="@+id/messageReceivedTextView"
+        android:layout_width="292dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/border_white_background"
+        android:textSize="11sp"
+        android:scrollbars = "vertical"
+        android:gravity="bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageReceivedTitleTextView" />
+
+    <ToggleButton
+        android:id="@+id/manualAutoToggleBtn"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginStart="8dp"
+        android:textAlignment="center"
+        android:textOff="AUTO"
+        android:textOn="MANUAL"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/f1Btn"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="F1 value"
+        android:text="F1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/manualAutoToggleBtn" />
+
+    <Button
+        android:id="@+id/f2Btn"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="7dp"
+        android:contentDescription="F2 value"
+        android:text="F2"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reconfigureBtn" />
+
+    <Button
+        android:id="@+id/reconfigureBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="8dp"
+        android:text="RECONFIGURE"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
