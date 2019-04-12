@@ -2,9 +2,6 @@
 
 Algorithm code for NTU CZ3004 Multi-disciplinary Design Project.
 
-
-Branches:
-
 * master
   * exploration with full calibration and image recognition.
   * select tasks in GUI:
