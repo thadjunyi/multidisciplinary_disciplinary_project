@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="image_algo/src"/>
+	<classpathentry kind="src" path="image_disabled/src"/>
+	<classpathentry kind="src" path="master/src"/>
+	<classpathentry kind="src" path="min_alignment/src"/>
+	<classpathentry kind="src" path="reduce_alignment/src"/>
+	<classpathentry kind="lib" path="image_algo/lib/json-20180813-javadoc.jar"/>
+	<classpathentry kind="lib" path="image_algo/lib/json-20180813-sources.jar"/>
+	<classpathentry kind="lib" path="image_algo/lib/json-20180813.jar"/>
+	<classpathentry kind="lib" path="image_disabled/lib/json-20180813-javadoc.jar"/>
+	<classpathentry kind="lib" path="image_disabled/lib/json-20180813-sources.jar"/>
+	<classpathentry kind="lib" path="image_disabled/lib/json-20180813.jar"/>
+	<classpathentry kind="lib" path="master/lib/json-20180813-javadoc.jar"/>
+	<classpathentry kind="lib" path="master/lib/json-20180813-sources.jar"/>
+	<classpathentry kind="lib" path="master/lib/json-20180813.jar"/>
+	<classpathentry kind="lib" path="min_alignment/lib/json-20180813-javadoc.jar"/>
+	<classpathentry kind="lib" path="min_alignment/lib/json-20180813-sources.jar"/>
+	<classpathentry kind="lib" path="min_alignment/lib/json-20180813.jar"/>
+	<classpathentry kind="lib" path="reduce_alignment/lib/json-20180813-javadoc.jar"/>
+	<classpathentry kind="lib" path="reduce_alignment/lib/json-20180813-sources.jar"/>
+	<classpathentry kind="lib" path="reduce_alignment/lib/json-20180813.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
